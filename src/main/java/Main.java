@@ -17,16 +17,3 @@ public class Main {
     }
 }
 
-//Refatore para que o contrato seja respeitado sem exceções em fluxo normal:
-//
-//    Somente contas que suportam saque devem ser usadas para saque.
-//    O saque não deve ser tentado em contas de depósito apenas.
-//
-//Caminhos possíveis (você escolhe)
-//
-//    Introduzir interface Withdrawable { void withdraw(double amount); } e 
-//	fazer CheckingAccount implementá-la.
-//    SavingsAccount não implementa.
-//    BankService deixa de aceitar Account e passa a aceitar Withdrawable para 
-//saques, ou faz uma checagem segura e ignora SavingsAccount.
-//    Ou separar hierarquia (WithdrawableAccount vs DepositOnlyAccount).
